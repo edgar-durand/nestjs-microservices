@@ -1,0 +1,93 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/gateway/src",
+  "monorepo": true,
+  "root": "apps/gateway",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/gateway/tsconfig.app.json"
+  },
+  "projects": {
+    "gateway": {
+      "type": "application",
+      "root": "apps/gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/gateway/tsconfig.app.json"
+      }
+    },
+    "firebase-microservice": {
+      "type": "application",
+      "root": "apps/firebase-microservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/firebase-microservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/firebase-microservice/tsconfig.app.json"
+      }
+    },
+    "mongodb-microservice": {
+      "type": "application",
+      "root": "apps/mongodb-microservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/mongodb-microservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/mongodb-microservice/tsconfig.app.json"
+      }
+    },
+    "google-microservice": {
+      "type": "application",
+      "root": "apps/google-microservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/google-microservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/google-microservice/tsconfig.app.json"
+      }
+    },
+    "crawler-microservice": {
+      "type": "application",
+      "root": "apps/crawler-microservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/crawler-microservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/crawler-microservice/tsconfig.app.json"
+      }
+    },
+    "interfaces": {
+      "type": "library",
+      "root": "libs/interfaces",
+      "entryFile": "index",
+      "sourceRoot": "libs/interfaces/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/interfaces/tsconfig.lib.json"
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.lib.json"
+      }
+    },
+    "utils": {
+      "type": "library",
+      "root": "libs/utils",
+      "entryFile": "index",
+      "sourceRoot": "libs/utils/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/utils/tsconfig.lib.json"
+      }
+    },
+    "services": {
+      "type": "library",
+      "root": "libs/services",
+      "entryFile": "index",
+      "sourceRoot": "libs/services/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/services/tsconfig.lib.json"
+      }
+    }
+  }
+}
